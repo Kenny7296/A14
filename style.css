@@ -1,0 +1,16 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    text-indent: 50px;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}

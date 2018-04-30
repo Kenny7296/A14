@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+            function getCookie(name) {
+                var re=new RegExp(name+"=([^;]+)");
+                var value=re.exec(document.cookie);
+                return(value!=null)?unescape(value[1]):null;
+            }
+
+            var today=new Date();
+            var expiry=new Date(today.getTime()+30*24*3600*1000);
+            var expired=new Date(today.getTime()-24*3600*1000);
+
+            function setCookie(name,value) {
+                document.cookie=name+"="+escape(value)+"; path=/; expires="+expiry.toESTString();
+            }
+
+            function storeValues(form) {
+                setCookie(form.field1.value);return true;
+            }
+
+            function deleteCookie(name) {
+                document.cookie=name+"=null; path=/; expires="+expired.toESTString();
+            }
+
+            document.write(getCookie("field1"));
+
+        </script>
+    </head>
+
+    <body>
+
+        <br />
+        <form onsubmit="return storeValues(this);">
+            <fieldset>
+                <span><input type="text" size="32" name="field1" value=""></span>
+                <span><input type="submit" value="Set Cookie"></span>
+
+            </fieldset>
+        </form>
+        <br /><br />
+
+        <h3>What is a Cookie?</h3>
+        <p>
+            Trackware is a program or data that can be used by a third party to identify a user
+            or computer. The most commonly used trackware is a Tracking Cookie - a small piece of
+            data that identifies a certain user or a certain computer, with the help of a web
+            browser configured to store cookies. Certain programs are also used as trackware for
+            portable computer systems, as a form of protection against theft. Cookies are not malware
+            and are not inherently malicious - they do not harm the computer system or the user's
+            stored information. Due to privacy concerns however, they are often unwanted.
+        </p>
+        <p>
+            Normally, when a user visits a website, the site saves a small text file, known as a
+            cookie, onto the user's system. This file identifies the user as a unique visitor to
+            that site and contains a 'record' of the actions performed or preferences set during
+            the visit, for example, the last page viewed or the saved contents of the user's online
+            "shopping cart". If the user later returns, the site can then 'read' the saved cookie
+            and display the appropriate content. Unlike a normal cookie, a tracking cookie can be
+            used by more than one site. Because a single tracking cookie may contain a history of
+            the user's actions on multiple sites, if these cookies are misused or exploited the saved
+            information may be used to analyze the user's web browsing behavior.
+        </p>
+
+        <h4>The Good</h4>
+        <ul>
+            <li>
+                <b>Conveniency:</b> Cookies not only remember which websites you have been to, they
+                also remember information about forms. Filling out your address every time you buy
+                something online gets old quickly. Cookies can make filling out address forms quick
+                and efficient. Most online shopping websites nowadays allow cookies for address
+                and email information but make you fill out your credit card information each time
+                for security purposes.
+            </li>
+            <li>
+                <b>Personalization:</b> Cookies are great for serving up personalized content
+                that is geared towards that specific user’s preferences. Amazon uses cookies to offer
+                you related products, Google uses cookies to better understand your searches, and
+                Facebook uses cookies to do just about everything.
+            </li>
+            <li>
+                <b>Effective Advertising:</b> How nice would it be to only be offered products or
+                services that are relevant to you? Internet marketing companies collect data from
+                cookies to run marketing campaigns aimed at a very specific market segment including
+                product group, geolocation, search term, and demographics.
+            </li>
+            <li>
+                <b>Ease of Control:</b> It is actually really easy to manage your cookies if you know
+                how. Most browsers make it easy for you to clear your browsing history. Cookies are
+                stored on your hard drive in a text file under cookie.txt usually, and since it is a
+                text file you can use just about any viewer or text editor to display, edit, and delete
+                them.
+            </li>
+        </ul>
+
+        <h4>The Bad</h4>
+        <ul>
+            <li>
+                <b>Privacy:</b> The main concern for most users is privacy. Cookie enabled web browsers
+            keep track of all the websites you have visited. This means that with permission, third
+            parties can access the information stored by these cookies. These third parties can be
+            advertisers, other users, or even the government in some cases.
+            </li>
+            <li>
+                <b>Security:</b> Cookie security is a large problem. The concern is that many security
+            holes have been found in different browsers. Some of these holes were so serious that they
+            allowed malicious webmasters to gain access to users’ email, different passwords, and
+            credit card information.
+            </li>
+            <li>
+                <b>Secrecy:</b> Although third party cookies can be blocked through your browser settings,
+            most people don’t have the technical expertise to do this. Most browsers purposely make it
+            difficult to find this setting in order to prevent you from turning them off. No cookies
+            mean no data, which in turn means less money.
+            </li>
+        </ul>
+
+        <h4>Are Cookies Ethical?</h4>
+        <p>
+            In my personal opinion, cookies are not an invasion of privacy and they are ethical. Because
+            cookies do not do anything to harm your computer, and are just a piece of data, I feel that
+            they should continue to be allowed for use. It is not the program that is malicious, it's the
+            span of potentially malicious people that use it for an evil agenda.
+        </p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
